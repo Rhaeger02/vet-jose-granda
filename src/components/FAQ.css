@@ -1,0 +1,22 @@
+.faq-item {
+  text-align: center;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 15px 0;
+  cursor: pointer;
+}
+
+.faq-item h3 {
+  font-size: 1.05rem;
+}
+
+.faq-item p {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  color: #4b5563;
+}
+
+.faq-item.open p {
+  max-height: 100px;
+  margin-top: 10px;
+}

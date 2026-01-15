@@ -1,0 +1,107 @@
+.empresa-legal {
+  background: #1f2933;
+  color: #e5e7eb;
+  padding: 70px 20px;
+}
+
+.empresa-legal-grid {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 40px;
+}
+
+/* =====================
+   IZQUIERDA
+===================== */
+.empresa-info h3 {
+  font-size: 22px;
+  margin-bottom: 14px;
+  color: #ffffff;
+}
+
+.empresa-info p {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #cbd5e1;
+  margin-bottom: 18px;
+}
+
+.referencias {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.referencias a {
+  font-size: 14px;
+  color: #67e8f9;
+  text-decoration: none;
+}
+
+.referencias a:hover {
+  text-decoration: underline;
+}
+
+/* =====================
+   EMPRESA / LEGAL
+===================== */
+.empresa,
+.legal {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.empresa h4,
+.legal h4 {
+  font-size: 18px;
+  margin-bottom: 8px;
+  color: #ffffff;
+}
+
+.empresa a {
+  color: #e5e7eb;
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.empresa a:hover {
+  color: #67e8f9;
+}
+
+.link {
+  cursor: pointer;
+  font-size: 15px;
+  color: #cbd5e1;
+}
+
+.link:hover {
+  color: #67e8f9;
+  text-decoration: underline;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 768px) {
+  .empresa-legal-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .empresa-info {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .empresa-legal {
+    padding: 50px 20px;
+  }
+
+  .empresa-legal-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}

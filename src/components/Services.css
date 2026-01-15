@@ -1,0 +1,93 @@
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  justify-content: center;
+  align-items: stretch;
+  gap: 30px;
+}
+
+/* CARD */
+.service-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 28px;
+  min-width: 350px;
+  text-align: center;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+
+  /* Animación de entrada */
+  opacity: 0;
+  transform: translateY(30px);
+
+  /* Transiciones */
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    opacity 0.6s ease;
+}
+
+/* Cuando aparece al hacer scroll */
+.service-card.animate {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* 🔥 HOVER (desktop) */
+.service-card:hover {
+  transform: translateY(-15px) scale(1.03);
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.14);
+}
+
+/* IMAGEN */
+.service-card img {
+  width: 100%;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  object-fit: cover;
+}
+
+/* TITULO */
+.service-card h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+/* TEXTO */
+.service-card p {
+  color: #555;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+
+/* TABLET */
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .service-card {
+    min-width: 100%;
+  }
+
+  /* Evitar hover en tablets */
+  .service-card:hover {
+    transform: none;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+  }
+}
+
+/* MOBILE */
+@media (max-width: 480px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-card {
+    padding: 24px;
+  }
+}
